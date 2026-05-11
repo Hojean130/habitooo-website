@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: theme(colors.background);
+  color: theme(colors.primary);
+  font-family: theme(fontFamily.sans);
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: rgba(22, 163, 74, 0.18);
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-[1200px] px-5 md:px-8;
+  }
+
+  .container-text {
+    @apply mx-auto w-full max-w-[768px] px-5 md:px-8;
+  }
+
+  .container-legal {
+    @apply mx-auto w-full max-w-[840px] px-5 md:px-8;
+  }
+
+  .card {
+    @apply rounded-2xl border border-border-default bg-white shadow-card;
+  }
+
+  .card-surface {
+    @apply rounded-2xl border border-border-default bg-surface shadow-card;
+  }
+
+  .focus-ring {
+    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-green/40 focus-visible:ring-offset-2 focus-visible:ring-offset-background;
+  }
+
+  .legal {
+    @apply prose prose-zinc max-w-none;
+  }
+
+  .legal :where(h1, h2, h3) {
+    @apply tracking-[-0.02em];
+  }
+
+  .legal :where(h1) {
+    @apply text-4xl font-semibold;
+  }
+
+  .legal :where(h2) {
+    @apply mt-10 scroll-mt-28 text-2xl font-semibold;
+  }
+
+  .legal :where(h3) {
+    @apply mt-6 scroll-mt-28 text-xl font-semibold;
+  }
+
+  .legal :where(p, li) {
+    @apply text-base leading-[1.65] text-primary/80;
+  }
+
+  .legal :where(a) {
+    @apply text-primary underline decoration-primary/20 underline-offset-4 hover:decoration-primary/35;
+  }
+}
+
