@@ -3,10 +3,13 @@ import { cn } from "@/lib/utils";
 
 export function Brand({
   href = "/",
-  className
+  className,
+  showMark = true
 }: {
   href?: string;
   className?: string;
+  /** false = 僅文字 wordmark（Header 用） */
+  showMark?: boolean;
 }) {
   return (
     <Link
@@ -17,10 +20,20 @@ export function Brand({
       )}
       aria-label="Habitooo"
     >
-      <span className="relative inline-flex h-8 w-8 items-center justify-center rounded-xl border border-border-default bg-surface shadow-card">
-        <span className="h-2 w-2 rounded-full bg-brand-green shadow-[0_0_0_3px_rgba(22,163,74,0.10)] animate-live-pulse" />
-      </span>
-      <span>Habitooo</span>
+      {showMark ? (
+        <span className="relative inline-flex h-8 w-8 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-border-default bg-surface shadow-card">
+          {/* 正式 logo：替換 public/images/brand/logo.svg（或改檔名並同步此路徑） */}
+          <img
+            src="/images/brand/logo.svg"
+            alt=""
+            width={32}
+            height={32}
+            className="h-8 w-8 object-contain p-1"
+            decoding="async"
+          />
+        </span>
+      ) : null}
+      <span className="text-base font-semibold tracking-[-0.02em]">Habitooo</span>
     </Link>
   );
 }

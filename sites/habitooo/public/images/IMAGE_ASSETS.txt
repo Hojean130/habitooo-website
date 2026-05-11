@@ -1,0 +1,14 @@
+Habitooo 官網靜態圖檔放這裡（Next.js：public/ 下的檔案網址從根路徑 / 開始）
+
+brand/
+  logo.svg          ← Header / Footer 文字 logo 左側圖示（請換成正式 Habitooo logo）
+  logo-wordmark.svg ← 可選：純圖片字標（若有的話）
+  logo-dark.svg     ← 可選：深色底用反白版
+
+marketing/
+  首頁用圖、截圖、裝飾圖（用 /images/marketing/檔名 引用）
+
+icons/
+  其他 UI 小圖示（非 Lucide 的客製圖）
+
+OG / favicon 仍可在 public/ 根目錄（例如 og.svg、favicon.svg），或把新版 OG 放 marketing/ 後改 metadata。

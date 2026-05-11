@@ -1,6 +1,15 @@
+import type { Metadata } from "next";
 import { LegalLayout, type LegalTocItem } from "@/components/legal/LegalLayout";
+import { getSupportEmail } from "@/lib/support-email";
+
+export const metadata: Metadata = {
+  title: "支援與聯絡"
+};
 
 export default function SupportPage() {
+  const supportEmail = getSupportEmail();
+  const mailto =
+    supportEmail !== "TODO_SUPPORT_EMAIL" ? `mailto:${supportEmail}` : undefined;
   const toc: LegalTocItem[] = [
     { id: "contact", label: "聯絡方式" },
     { id: "faq", label: "FAQ" },
@@ -10,7 +19,13 @@ export default function SupportPage() {
   return (
     <LegalLayout title="Support" updatedAt="2026-05-11" toc={toc}>
       <p id="contact">
-        需要協助或回報問題，請寄信到 <a href="mailto:support@habitooo.app">support@habitooo.app</a>。
+        需要協助或回報問題，請寄信到{" "}
+        {mailto ? (
+          <a href={mailto}>{supportEmail}</a>
+        ) : (
+          <span>{supportEmail}</span>
+        )}
+        。
       </p>
 
       <h2 id="faq">常見問題（FAQ）</h2>
@@ -40,7 +55,13 @@ export default function SupportPage() {
 
       <h2 id="delete">刪除帳號 / 資料請求</h2>
       <p>
-        你可以寄信到 <a href="mailto:support@habitooo.app">support@habitooo.app</a>，主旨請寫「Habitooo - 刪除帳號/資料請求」，
+        你可以寄信到{" "}
+        {mailto ? (
+          <a href={mailto}>{supportEmail}</a>
+        ) : (
+          <span>{supportEmail}</span>
+        )}
+        ，主旨請寫「Habitooo - 刪除帳號/資料請求」，
         並在內容提供你的登入方式（Apple/Google）與顯示名稱（如有）。
       </p>
       <p>

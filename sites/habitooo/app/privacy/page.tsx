@@ -1,4 +1,9 @@
+import type { Metadata } from "next";
 import { LegalLayout, type LegalTocItem } from "@/components/legal/LegalLayout";
+
+export const metadata: Metadata = {
+  title: "隱私權政策"
+};
 
 export default function PrivacyPage() {
   const toc: LegalTocItem[] = [

@@ -1,4 +1,9 @@
+import type { Metadata } from "next";
 import { LegalLayout, type LegalTocItem } from "@/components/legal/LegalLayout";
+
+export const metadata: Metadata = {
+  title: "服務條款"
+};
 
 export default function TermsPage() {
   const toc: LegalTocItem[] = [

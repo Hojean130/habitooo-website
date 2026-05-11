@@ -57,7 +57,7 @@ export function LiveSpaceMock({
             <Clock className="h-4 w-4 text-secondary" aria-hidden="true" />
             <span>下一段 25:00</span>
           </div>
-          <div className="text-xs text-secondary">Join this session</div>
+          <div className="text-xs text-secondary">加入這段</div>
         </div>
 
         <div className="mt-3 h-2 w-full overflow-hidden rounded-full bg-border-default/60">
@@ -70,7 +70,7 @@ export function LiveSpaceMock({
           <span>群組進度 72%</span>
           <span className="inline-flex items-center gap-1">
             <Flame className="h-4 w-4 text-secondary" aria-hidden="true" />
-            <span>momentum</span>
+            <span>動量</span>
           </span>
         </div>
       </div>
@@ -90,7 +90,7 @@ export function LiveSpaceMock({
                   : "正在進行"}
             </div>
             <div className="mt-3 flex items-baseline justify-between">
-              <div className="text-xs text-secondary">timer</div>
+              <div className="text-xs text-secondary">計時</div>
               <div className="font-mono text-sm text-primary/80">{m.remaining ?? "--:--"}</div>
             </div>
           </div>
