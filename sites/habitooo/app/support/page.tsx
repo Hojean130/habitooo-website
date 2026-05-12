@@ -17,7 +17,16 @@ export default function SupportPage() {
   ];
 
   return (
-    <LegalLayout title="Support" updatedAt="2026-05-11" toc={toc}>
+    <LegalLayout
+      badge="SUPPORT"
+      title="支援與聯絡"
+      subtitle="需要協助或回報問題？我們會盡快回覆你。"
+      version="—"
+      effectiveAt="2026/05/11"
+      updatedAt="2026/05/11"
+      toc={toc}
+      metaLine={<>最後更新 2026/05/11</>}
+    >
       <p id="contact">
         需要協助或回報問題，請寄信到{" "}
         {mailto ? (

@@ -28,9 +28,12 @@ const toc: LegalTocItem[] = [
 export default function TermsPage() {
   return (
     <LegalLayout
+      badge="TERMS OF SERVICE"
       title="Habitooo 服務條款"
+      subtitle="使用 Habitooo 前，請先詳閱本條款內容。"
+      version="v1.1"
+      effectiveAt="2026/05/12"
       updatedAt="2026/05/12"
-      metaLine={<>版本：v1.1 ｜ 生效日：2026/05/12 ｜ 最後更新：2026/05/12</>}
       toc={toc}
     >
       <TermsOfServiceBody />

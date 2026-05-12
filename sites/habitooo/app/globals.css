@@ -33,7 +33,7 @@ body {
   }
 
   .container-legal {
-    @apply mx-auto w-full max-w-[min(100%,840px)] px-4 min-[400px]:px-5 md:px-8;
+    @apply mx-auto w-full max-w-[min(100%,1360px)] px-4 min-[400px]:px-5 md:px-8;
   }
 
   .card {
@@ -61,19 +61,47 @@ body {
   }
 
   .legal :where(h2) {
-    @apply mt-8 scroll-mt-24 text-xl font-semibold sm:mt-10 sm:scroll-mt-28 sm:text-2xl;
+    @apply mt-12 border-t border-border-default/70 pt-8 scroll-mt-28 text-xl font-semibold sm:mt-14 sm:pt-10 sm:scroll-mt-32 sm:text-2xl;
   }
 
   .legal :where(h3) {
-    @apply mt-5 scroll-mt-24 text-lg font-semibold sm:mt-6 sm:scroll-mt-28 sm:text-xl;
+    @apply mt-6 scroll-mt-28 text-lg font-semibold sm:mt-7 sm:scroll-mt-32 sm:text-xl;
   }
 
   .legal :where(p, li) {
-    @apply text-base leading-[1.65] text-primary/80;
+    @apply text-base leading-[1.7] text-primary/80;
+  }
+
+  .legal :where(p) {
+    @apply my-4;
+  }
+
+  .legal :where(ul, ol) {
+    @apply my-4 pl-6;
+  }
+
+  .legal :where(li) {
+    @apply my-2;
+  }
+
+  .legal :where(blockquote) {
+    @apply my-6 rounded-2xl border border-border-default bg-surface px-5 py-4 text-sm text-secondary;
+  }
+
+  .legal :where(blockquote p) {
+    @apply my-2 text-sm leading-[1.7] text-secondary;
+  }
+
+  .legal :where(hr) {
+    @apply my-10 border-border-default/80;
+  }
+
+  .legal :where(h2:first-of-type) {
+    @apply mt-0 border-0 pt-0;
   }
 
   .legal :where(a) {
-    @apply text-primary underline decoration-primary/20 underline-offset-4 hover:decoration-primary/35;
+    @apply text-brand-green underline decoration-brand-green/25 underline-offset-4 hover:text-brand-green/90 hover:decoration-brand-green/40;
   }
 }
 
