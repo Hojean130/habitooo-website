@@ -28,12 +28,6 @@ export function PrivacyPolicyBody() {
           <strong>應用程式名稱</strong>：Habitooo
         </li>
         <li>
-          <strong>iOS Bundle ID</strong>：<code>com.hjcstudio.habitooo</code>
-        </li>
-        <li>
-          <strong>Android Package</strong>：<code>com.hjcstudio.habitooo</code>
-        </li>
-        <li>
           <strong>資料控制者 / 開發者</strong>：HJC Studio（以下簡稱「我們」或「開發者」）
         </li>
         <li>
@@ -886,11 +880,9 @@ export function PrivacyPolicyBody() {
 
       <h2 id="version-history">版本紀錄</h2>
       <ul>
-        <li>v1.0（2026/04/14）：初版</li>
         <li>
-          v1.1（2026/05/12）：加入 Apple ID 登入、IAP 訂閱（Habitooo Pro）、Freeze/Retro/Late Rescue/Last Push
-          功能、iOS Widget、推播 token、明確列出第三方處理者、補強 GDPR / CCPA / 台灣個資法第 8 條告知事項、新增 App Store 與
-          Google Play 揭露對照附錄
+          v1.0（2026/05/12）：Apple ID 登入；App 內購訂閱（Habitooo Pro）；Freeze／Retro／Late Rescue／Last Push；iOS
+          Widget；推播通知（含裝置 token）。
         </li>
       </ul>
     </>

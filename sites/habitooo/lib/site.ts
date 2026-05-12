@@ -3,7 +3,7 @@ export const site = {
   /** 頁尾版權法律主體 */
   copyrightHolder: "HJC Studio",
   url: "https://habitooo.app",
-  supportEmail: "support@foodooo.app",
+  supportEmail: "support@habitooo.app",
   locale: "zh-Hant" as const,
   title: "Habitooo - 有人陪你一起撐的社交習慣空間",
   description:

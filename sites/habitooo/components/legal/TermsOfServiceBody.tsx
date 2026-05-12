@@ -35,9 +35,6 @@ export function TermsOfServiceBody() {
           <strong>應用程式名稱</strong>：Habitooo
         </li>
         <li>
-          <strong>iOS Bundle ID</strong>：<code>com.hjcstudio.habitooo</code>
-        </li>
-        <li>
           <strong>服務提供者 / 開發者</strong>：HJC Studio（以下簡稱「我們」或「開發者」）
         </li>
         <li>
@@ -554,11 +551,8 @@ export function TermsOfServiceBody() {
 
       <h2 id="version-history">版本紀錄</h2>
       <ul>
-        <li>v1.0（2026/04/14）：初版</li>
         <li>
-          v1.1（2026/05/12）：加入 Apple ID 登入、Habitooo Pro 自動續訂訂閱、Freeze / Retro / Late Rescue / Last
-          Push 功能說明、Apple Licensed Application EULA 必載事項（第 10 條）、健康警語、責任限制金額具體化、GDPR / EU ODR
-          條款、文件版本與通知機制
+          v1.0（2026/05/12）：Apple ID 登入、Habitooo Pro（自動續訂 IAP）、Freeze／Retro／Late Rescue／Last Push 等功能與計費相關約定。
         </li>
       </ul>
     </>
