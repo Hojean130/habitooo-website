@@ -16,20 +16,15 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-x-6 gap-y-10 py-12 sm:grid-cols-2 sm:gap-x-8 sm:py-14 md:py-16 lg:grid-cols-6 lg:gap-x-10 lg:gap-y-12 lg:py-16">
           {/* 品牌區（對應 Foodooo 首欄 Logo + 標語） */}
           <div className="min-w-0 sm:col-span-2 lg:col-span-2">
-            <div className="flex items-start gap-3">
+            <div className="flex items-center gap-3">
               <PlaceholderImage
                 variant="logo"
                 className="w-10 shrink-0"
                 imgClassName="h-10 w-10 rounded-xl border border-border-default bg-white object-contain p-1.5 shadow-card"
               />
-              <div>
-                <div className="text-base font-semibold tracking-[-0.02em] text-primary">
-                  {site.name}
-                </div>
-                <p className="mt-2 max-w-sm text-sm leading-relaxed text-secondary">
-                  有人陪你一起撐的社交習慣空間。
-                </p>
-              </div>
+              <p className="max-w-sm text-sm leading-relaxed text-secondary">
+                有人陪你一起撐的社交習慣空間。
+              </p>
             </div>
           </div>
 

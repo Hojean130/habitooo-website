@@ -35,9 +35,11 @@ export function Brand({
           />
         </span>
       ) : null}
-      <span className="truncate text-base tracking-[-0.02em] sm:text-lg md:text-xl lg:text-2xl">
-        Habitooo
-      </span>
+      {!showMark ? (
+        <span className="truncate text-base tracking-[-0.02em] sm:text-lg md:text-xl lg:text-2xl">
+          Habitooo
+        </span>
+      ) : null}
     </Link>
   );
 }

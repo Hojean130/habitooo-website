@@ -18,7 +18,7 @@ const src: Record<PlaceholderVariant, string> = {
 };
 
 const altText: Record<PlaceholderVariant, string> = {
-  logo: "Logo 占位",
+  logo: "Habitooo",
   phone: "App 截圖占位",
   wide: "橫幅圖占位",
   "badge-app": "App Store 圖示占位",
