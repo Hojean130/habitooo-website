@@ -18,6 +18,12 @@ export const metadata: Metadata = {
     template: `%s｜${site.name}`
   },
   description: site.description,
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" }
+      // 如果之後有做 png/ico，可在這裡加上更高相容性版本
+    ]
+  },
   alternates: {
     canonical: site.url
   },

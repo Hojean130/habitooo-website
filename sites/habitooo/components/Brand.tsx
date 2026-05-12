@@ -22,14 +22,14 @@ export function Brand({
       aria-label="Habitooo"
     >
       {showMark ? (
-        <span className="relative inline-flex h-7 w-7 shrink-0 items-center justify-center overflow-hidden rounded-lg border border-border-default bg-surface shadow-card sm:h-8 sm:w-8 sm:rounded-xl">
+        <span className="relative inline-flex h-8 w-8 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-border-default bg-surface shadow-card sm:h-9 sm:w-9">
           {/* 路徑見 lib/image-assets.ts（BRAND_LOGO_SRC），預設為占位圖 */}
           <img
             src={BRAND_LOGO_SRC}
             alt=""
-            width={32}
-            height={32}
-            className="h-7 w-7 object-contain p-0.5 sm:h-8 sm:w-8 sm:p-1"
+            width={36}
+            height={36}
+            className="h-8 w-8 object-contain p-1 sm:h-9 sm:w-9 sm:p-1.5"
             decoding="async"
           />
         </span>
