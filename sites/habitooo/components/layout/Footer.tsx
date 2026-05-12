@@ -19,8 +19,8 @@ export function Footer() {
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
               <PlaceholderImage
                 variant="logo"
-                className="w-24 shrink-0 sm:w-28"
-                imgClassName="h-14 w-24 rounded-2xl border border-border-default bg-white object-contain p-1.5 shadow-card sm:h-16 sm:w-28 sm:rounded-3xl sm:p-2"
+                className="w-fit shrink-0"
+                imgClassName="h-14 w-auto max-w-full object-contain object-left sm:h-16"
               />
               <p className="max-w-sm text-sm leading-relaxed text-secondary sm:text-[0.9375rem]">
                 有人陪你一起撐的社交習慣空間。

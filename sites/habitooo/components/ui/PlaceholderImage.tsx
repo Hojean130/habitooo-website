@@ -27,7 +27,7 @@ const altText: Record<PlaceholderVariant, string> = {
 
 /** 對應實際資產比例，供瀏覽器預留版面 */
 const intrinsic: Record<PlaceholderVariant, { width: number; height: number }> = {
-  logo: { width: 200, height: 120 },
+  logo: { width: 3400, height: 948 },
   phone: { width: 220, height: 440 },
   wide: { width: 960, height: 320 },
   "badge-app": { width: 160, height: 48 },
