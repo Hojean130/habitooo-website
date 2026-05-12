@@ -1,5 +1,5 @@
 /**
- * 正式上線前可先用占位圖看排版；要換成真圖時改下列常數即可。
+ * Header logo；大版面請用高解析圖或純向量，避免內嵌小 PNG 被拉大發糊。
  */
 export const BRAND_LOGO_SRC = "/images/brand/logo.svg";
 // export const BRAND_LOGO_SRC = "/images/placeholders/logo-mark.svg";

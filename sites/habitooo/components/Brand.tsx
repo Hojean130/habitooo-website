@@ -22,15 +22,16 @@ export function Brand({
       aria-label="Habitooo"
     >
       {showMark ? (
-        <span className="relative inline-flex h-24 w-24 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-border-default bg-surface shadow-card sm:h-28 sm:w-28 sm:rounded-3xl md:h-36 md:w-36 lg:h-[12.5rem] lg:w-[12.5rem] lg:rounded-[1.75rem]">
-          {/* 路徑見 lib/image-assets.ts（BRAND_LOGO_SRC） */}
+        <span className="relative isolate inline-flex h-14 w-24 shrink-0 transform-gpu items-center justify-center overflow-hidden rounded-2xl border border-border-default bg-surface shadow-card sm:h-16 sm:w-28 sm:rounded-3xl md:h-[5.5rem] md:w-36 lg:h-[7.5rem] lg:w-[12.5rem] lg:rounded-[1.75rem]">
+          {/* 路徑見 lib/image-assets.ts */}
           <img
             src={BRAND_LOGO_SRC}
             alt=""
             width={200}
-            height={200}
-            className="size-full max-h-full object-contain p-1 sm:p-1.5 md:p-2 lg:p-3"
-            decoding="async"
+            height={120}
+            className="h-full w-full max-h-full object-contain p-1 sm:p-1.5 md:px-2 md:py-1.5 lg:px-3 lg:py-2"
+            decoding="sync"
+            fetchPriority="high"
           />
         </span>
       ) : null}
