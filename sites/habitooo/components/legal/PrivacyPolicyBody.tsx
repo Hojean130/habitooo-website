@@ -84,9 +84,7 @@ export function PrivacyPolicyBody() {
           <tbody>
             <tr>
               <td>第三方識別碼</td>
-              <td>
-                Google <code>sub</code> / Apple <code>user identifier</code>
-              </td>
+              <td>由 Google／Apple 提供、用於辨識您帳號之代碼（由該平台管理）</td>
               <td>Google / Apple</td>
             </tr>
             <tr>
@@ -106,12 +104,12 @@ export function PrivacyPolicyBody() {
             </tr>
             <tr>
               <td>App 內部使用者 ID</td>
-              <td>我們為您建立的內部 user_id</td>
+              <td>由本服務為您產生之內部帳號編號（僅用於對應您的資料與客服查核）</td>
               <td>由我們產生</td>
             </tr>
             <tr>
               <td>App 存取 Token</td>
-              <td>由後端核發之 Bearer token、refresh token（如有）</td>
+              <td>登入憑證（維持登入狀態並呼叫本服務；可能包含可更新之憑證）</td>
               <td>由我們產生</td>
             </tr>
           </tbody>
@@ -144,23 +142,23 @@ export function PrivacyPolicyBody() {
             </tr>
             <tr>
               <td>習慣資料</td>
-              <td>
-                習慣名稱、頻率（daily 等）、提醒時間、cutoff（判定時點）、群組綁定
-              </td>
+              <td>習慣名稱、重複頻率（例如每日）、提醒時間、每日截止／判定時段、所屬群組</td>
             </tr>
             <tr>
               <td>打卡紀錄</td>
-              <td>打卡日期/時間、完成狀態、所屬群組/習慣 ID</td>
+              <td>打卡日期與時間、完成狀態、所屬群組與習慣</td>
             </tr>
             <tr>
-              <td>連續紀錄（Streak）</td>
+              <td>連續完成紀錄</td>
               <td>
-                current streak、judge_at（判定時點）、freeze/retro/late_rescue 使用事件、月度配額
+                連續完成天數、與每日判定有關之時間資訊；「連續凍結」「補登」「晚打卡救回」「最後一推」等付費或配額相關功能之使用紀錄，以及當期可用額度
               </td>
             </tr>
             <tr>
-              <td>推播 token</td>
-              <td>您裝置之 APNs（iOS）或 FCM（Android）push token（僅在您同意通知時取得）</td>
+              <td>推播識別</td>
+              <td>
+                由 Apple／Google 推播服務產生、用以寄送通知至您手機之裝置識別碼（僅在您同意接收通知時取得）
+              </td>
             </tr>
           </tbody>
         </table>
@@ -169,10 +167,8 @@ export function PrivacyPolicyBody() {
       <h3>2.3 訂閱與付款相關資料（僅在您訂閱付費功能時）</h3>
       <p>本服務提供以下付費內容（統稱「Habitooo Pro」）：</p>
       <ul>
-        <li>
-          iOS 商品 ID：<code>com.hjcstudio.habitooo.pro.monthly</code>（自動續訂月訂閱）
-        </li>
-        <li>Android 商品 ID：將於上架 Google Play 時公布</li>
+        <li>iOS：Habitooo Pro 月費方案（App Store 自動續訂；實際名稱以商店顯示為準）</li>
+        <li>Android：於 Google Play 上架後，以商店內顯示之方案名稱為準</li>
       </ul>
       <p>
         我們<strong>不會直接接觸您的信用卡或銀行帳號資料</strong>。所有付款均由 Apple App Store 或 Google Play
@@ -190,27 +186,29 @@ export function PrivacyPolicyBody() {
           <tbody>
             <tr>
               <td>訂閱憑證</td>
-              <td>App Store / Google Play 之 receipt / purchase token（用於後端驗票）</td>
+              <td>
+                Apple／Google 依商店機制提供之購買憑證或交易識別資訊（僅供驗證訂閱是否有效，不包含完整卡號或銀行帳號）
+              </td>
               <td>Apple / Google</td>
             </tr>
             <tr>
               <td>訂閱狀態</td>
               <td>
-                plan（free / pro）、<code>pro_until</code>、<code>billing_anchor</code>、續訂/取消/退款事件
+                免費或付費方案類型、訂閱有效／到期或計費週期相關時間、續訂／取消／退款等狀態（主要由商店端通知）
               </td>
-              <td>Apple/Google webhook</td>
+              <td>Apple／Google 應用程式商店與帳務系統</td>
             </tr>
             <tr>
               <td>用量配額</td>
               <td>
-                <code>freeze_used</code>、<code>retro_used</code>、<code>last_push_used</code>、
-                <code>late_rescue_used</code>（用以計算 quota）
+                各付費功能於當期計費或曆法週期內之已使用次數（例如「連續凍結」「補登」「最後一推」「晚打卡救回」），用以在
+                App 內顯示剩餘額度
               </td>
               <td>由您操作產生</td>
             </tr>
             <tr>
               <td>付費功能事件</td>
-              <td>streak_freeze_events、retro_checkin、late_rescue 等審計紀錄</td>
+              <td>與上述付費功能相關之操作紀錄（僅限提供該等功能、額度計算與爭議處理所必要之範圍）</td>
               <td>由您操作產生</td>
             </tr>
           </tbody>
@@ -242,10 +240,7 @@ export function PrivacyPolicyBody() {
           <tbody>
             <tr>
               <td>裝置資訊</td>
-              <td>
-                platform（iOS/Android）、<code>device_name</code>、OS 版本、App 版本、
-                <code>runtimeVersion</code>
-              </td>
+              <td>裝置平台（iOS 或 Android）、系統中的裝置名稱（若有）、作業系統版本、App 版本、執行環境版本</td>
             </tr>
             <tr>
               <td>網路資料</td>
@@ -253,14 +248,12 @@ export function PrivacyPolicyBody() {
             </tr>
             <tr>
               <td>錯誤與診斷</td>
-              <td>crash log、API 錯誤碼（不包含您的個資內容）</td>
+              <td>當機紀錄、錯誤代碼（不含您輸入之習慣文字、群組聊天等內容）</td>
             </tr>
             <tr>
               <td>Widget 共享資料</td>
               <td>
-                為讓 iOS Widget 顯示今日習慣，會透過 App Group{" "}
-                <code>group.com.hjcstudio.habitooo</code> 將最少必要欄位（如：habit_id、名稱、完成狀態、
-                streak_protected）寫入裝置本機共享容器；<strong>該容器僅本機裝置可讀，未上傳雲端</strong>
+                為讓 iOS 主畫面小工具顯示今日習慣，會於<strong>同一支手機</strong>上的 App 與小工具之間寫入最少必要之習慣摘要（例如名稱、是否完成、連續紀錄相關顯示所需資訊）；資料僅存於裝置本機之系統允許共享區域，<strong>未另外上傳至我們的伺服器作為小工具專用之雲端副本</strong>
               </td>
             </tr>
           </tbody>
@@ -281,7 +274,7 @@ export function PrivacyPolicyBody() {
           <tbody>
             <tr>
               <td>推播通知（Notifications）</td>
-              <td>提醒打卡、cutoff 倒數、「最後一推」、社群動態</td>
+              <td>提醒打卡、每日截止前倒數、「最後一推」、社群動態</td>
               <td>選填，可隨時於系統設定關閉</td>
             </tr>
             <tr>
@@ -322,7 +315,7 @@ export function PrivacyPolicyBody() {
           <tbody>
             <tr>
               <td>帳戶管理與身分驗證（特定目的 040）</td>
-              <td>登入、登出、Session 管理、防盜用</td>
+              <td>登入、登出、連線／登入狀態管理、防盜用</td>
             </tr>
             <tr>
               <td>行銷以外之消費者∕顧客管理及服務（特定目的 069）</td>
@@ -369,7 +362,7 @@ export function PrivacyPolicyBody() {
         <li>您針對群組內習慣的<strong>打卡狀態、打卡時點</strong></li>
         <li>您是否屬於「最後尚未完成的成員」（社群壓力 UI 之核心訊息）</li>
         <li>
-          您的群組內 <strong>streak</strong> 表現（如 UI 設計顯示）
+          您的群組內<strong>連續完成</strong>表現（依 App 畫面設計顯示）
         </li>
       </ul>
       <p>
@@ -398,7 +391,7 @@ export function PrivacyPolicyBody() {
           <tbody>
             <tr>
               <td>Apple Inc.</td>
-              <td>Apple ID 登入、IAP、APNs、TestFlight</td>
+              <td>Apple ID 登入、應用程式內購、推播通知、測試版發送（TestFlight）</td>
               <td>美國 / 全球</td>
               <td>
                 <a href="https://www.apple.com/legal/privacy/" rel="noopener noreferrer" target="_blank">
@@ -408,7 +401,7 @@ export function PrivacyPolicyBody() {
             </tr>
             <tr>
               <td>Google LLC</td>
-              <td>Google OAuth、FCM、Google Play Billing</td>
+              <td>Google 帳號登入、推播服務、Google Play 應用程式內購與帳務</td>
               <td>美國 / 全球</td>
               <td>
                 <a href="https://policies.google.com/privacy" rel="noopener noreferrer" target="_blank">
@@ -490,15 +483,15 @@ export function PrivacyPolicyBody() {
               </td>
             </tr>
             <tr>
-              <td>訂閱與付款紀錄（receipt、發票、退款）</td>
+              <td>訂閱與付款相關紀錄（例如商店提供之訂閱憑證、發票、退款紀錄）</td>
               <td>依稅務與會計法令至少保存 5 年（中華民國商業會計法第 38 條）</td>
             </tr>
             <tr>
-              <td>推播 token</td>
+              <td>推播識別</td>
               <td>自您關閉推播或刪除 App 起 30 日內失效並清除</td>
             </tr>
             <tr>
-              <td>Crash / 診斷 log</td>
+              <td>當機與診斷紀錄</td>
               <td>不超過 90 日</td>
             </tr>
             <tr>
@@ -526,7 +519,7 @@ export function PrivacyPolicyBody() {
             </tr>
             <tr>
               <td>請求製給複製本</td>
-              <td>您可請求以可攜式格式（JSON 等）取得您的資料</td>
+              <td>您可請求以可攜式、機器可讀之格式取得您的資料</td>
             </tr>
             <tr>
               <td>補充或更正</td>
@@ -562,7 +555,7 @@ export function PrivacyPolicyBody() {
         隱私請求」，並提供：
       </p>
       <ol>
-        <li>您的 App 內 user_id（可於「編輯個人檔案」頁面取得）或登入用 email</li>
+        <li>可識別您帳號之資訊（例如登入所使用之電子郵件；若 App 內有顯示帳號代碼，請一併附上）</li>
         <li>您的請求類型</li>
         <li>必要時，我們可能要求您配合身分驗證程序，以避免假冒請求</li>
       </ol>
@@ -580,16 +573,16 @@ export function PrivacyPolicyBody() {
           <strong>存取控管</strong>：以最小權限原則限制內部存取，並保留稽核記錄
         </li>
         <li>
-          <strong>驗證安全</strong>：採 OAuth 2.0 + PKCE（Google）與 Apple Sign in 標準流程
+          <strong>驗證安全</strong>：採 Google／Apple 官方建議之安全登入流程
         </li>
         <li>
-          <strong>token 管理</strong>：Bearer token 加密儲存於裝置 AsyncStorage / Keychain；過期或登出時清除
+          <strong>登入憑證</strong>：以加密方式儲存於您手機的安全儲存區；過期或登出時清除
         </li>
         <li>
           <strong>滲透與漏洞</strong>：定期更新依賴套件、追蹤已揭露漏洞
         </li>
         <li>
-          <strong>Widget 隔離</strong>：iOS Widget 透過 App Group 沙箱共享資料，僅同一裝置可讀
+          <strong>小工具資料</strong>：iOS 小工具僅透過系統機制與同一支手機上的 App 共享本機資料
         </li>
       </ul>
       <p>
@@ -603,7 +596,7 @@ export function PrivacyPolicyBody() {
       <h2 id="notifications">9. 推播通知</h2>
       <p>當您同意接收推播後，我們會在下列情境發送通知：</p>
       <ul>
-        <li>習慣 cutoff 前之倒數提醒（含「最後一推」付費功能）</li>
+        <li>習慣每日截止前之倒數提醒（含「最後一推」付費功能）</li>
         <li>群組社群動態（例如：其他成員已完成、您是最後一位）</li>
         <li>訂閱與付款相關通知（續訂提示、退款結果）</li>
         <li>重要服務或政策變更通知</li>
@@ -612,8 +605,8 @@ export function PrivacyPolicyBody() {
 
       <h2 id="automated-decisions">10. 自動化決策與個人剖繪</h2>
       <p>
-        我們<strong>不對您進行</strong>會產生法律效果或重大影響之自動化決策（GDPR Art. 22）。Streak、Freeze、Retro、Late
-        Rescue 等判定僅為服務功能，不會用於信用、保險、就業等實質決策。
+        我們<strong>不對您進行</strong>會產生法律效果或重大影響之自動化決策（GDPR Art. 22）。連續完成天數、「連續凍結」「補登」「晚打卡救回」等規則僅屬 App
+        內遊戲化／激勵功能之計算，不會用於信用、保險、就業等實質決策。
       </p>
 
       <h2 id="cookies">11. Cookie / 類似技術</h2>
@@ -621,12 +614,13 @@ export function PrivacyPolicyBody() {
         本服務為原生行動 App，<strong>不使用瀏覽器 cookie</strong>。我們僅於裝置上使用：
       </p>
       <ul>
-        <li>AsyncStorage / Keychain：儲存登入 token 與本機快取</li>
-        <li>App Group container：iOS Widget 共享資料</li>
-        <li>第三方 SDK 預設之識別子：例如 FCM/APNs token</li>
+        <li>手機本機安全儲存：登入憑證與必要之本機快取</li>
+        <li>iOS：App 與主畫面小工具間之本機資料共享（僅限同一裝置）</li>
+        <li>推播服務識別：例如 Apple／Google 推播所需之裝置識別（僅在您同意通知時取得）</li>
       </ul>
       <p>
-        我們<strong>不使用</strong>：第三方廣告 SDK、跨 App 追蹤識別子（IDFA 不會被請求）、像素追蹤、Web 廣告 cookie。
+        我們<strong>不使用</strong>：第三方廣告 SDK、用於跨 App 廣告追蹤之裝置識別（我們不會為此目的向系統請求該類識別）、像素追蹤、Web 廣告
+        cookie。
       </p>
 
       <h2 id="policy-updates">12. 本政策的更新</h2>
@@ -714,7 +708,7 @@ export function PrivacyPolicyBody() {
               <td>App Functionality, Analytics</td>
             </tr>
             <tr>
-              <td>Identifiers → Device ID（push token）</td>
+              <td>Identifiers → Device ID（推播用裝置識別）</td>
               <td>是</td>
               <td>是</td>
               <td>否</td>
@@ -845,7 +839,7 @@ export function PrivacyPolicyBody() {
               <td>是</td>
             </tr>
             <tr>
-              <td>Device or other IDs（push token）</td>
+              <td>Device or other IDs（推播用裝置識別）</td>
               <td>是</td>
               <td>否</td>
               <td>是</td>
@@ -881,8 +875,8 @@ export function PrivacyPolicyBody() {
       <h2 id="version-history">版本紀錄</h2>
       <ul>
         <li>
-          v1.0（2026/05/12）：Apple ID 登入；App 內購訂閱（Habitooo Pro）；Freeze／Retro／Late Rescue／Last Push；iOS
-          Widget；推播通知（含裝置 token）。
+          v1.0（2026/05/12）：Apple ID 登入；App 內購訂閱（Habitooo Pro）；連續凍結／補登／晚打卡救回／最後一推；iOS
+          主畫面小工具；推播通知。
         </li>
       </ul>
     </>

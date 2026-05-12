@@ -128,11 +128,11 @@ export function LegalLayout({
                   <dt className="shrink-0 text-secondary">Last updated</dt>
                   <dd className="min-w-0 flex-1 text-right font-medium text-primary">{updatedAt}</dd>
                 </div>
-                <div className="flex min-w-0 items-start justify-between gap-3">
-                  <dt className="shrink-0 text-secondary">Contact</dt>
-                  <dd className="min-w-0 flex-1 text-right">
+                <div className="flex min-w-0 flex-col gap-1">
+                  <dt className="text-secondary">Contact</dt>
+                  <dd className="min-w-0">
                     <a
-                      className="block w-full max-w-full break-all text-brand-green underline decoration-brand-green/25 underline-offset-4 hover:decoration-brand-green/40 focus-ring"
+                      className="inline-block max-w-full break-all text-brand-green underline decoration-brand-green/25 underline-offset-4 hover:decoration-brand-green/40 focus-ring"
                       href={`mailto:${supportEmail}`}
                     >
                       {supportEmail}
