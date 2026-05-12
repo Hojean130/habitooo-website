@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Container } from "@/components/ui";
+import { getSupportEmail } from "@/lib/support-email";
 import { cn } from "@/lib/utils";
 
 export type LegalTocItem = {
@@ -31,13 +32,18 @@ export function LegalLayout({
   title,
   updatedAt,
   toc,
-  children
+  children,
+  metaLine
 }: {
   title: string;
   updatedAt: string;
   toc: LegalTocItem[];
   children: React.ReactNode;
+  /** 若提供，取代「最後更新：…」單行（例如隱私頁含版本／生效日） */
+  metaLine?: React.ReactNode;
 }) {
+  const supportEmail = getSupportEmail();
+
   return (
     <main className="bg-background">
       <Container size="legal">
@@ -61,7 +67,9 @@ export function LegalLayout({
               <h1 className="text-balance text-3xl font-semibold tracking-[-0.03em] text-primary sm:text-4xl">
                 {title}
               </h1>
-              <div className="mt-3 text-sm text-secondary">最後更新：{updatedAt}</div>
+              <div className="mt-3 text-sm text-secondary">
+                {metaLine ?? <>最後更新：{updatedAt}</>}
+              </div>
               <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-secondary">
                 <Link
                   className="underline decoration-primary/20 underline-offset-4 hover:text-primary"
@@ -72,9 +80,9 @@ export function LegalLayout({
                 <span className="text-secondary/40">·</span>
                 <a
                   className="underline decoration-primary/20 underline-offset-4 hover:text-primary"
-                  href="mailto:support@habitooo.app"
+                  href={`mailto:${supportEmail}`}
                 >
-                  support@habitooo.app
+                  {supportEmail}
                 </a>
               </div>
             </div>
