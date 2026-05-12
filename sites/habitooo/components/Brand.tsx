@@ -16,26 +16,25 @@ export function Brand({
     <Link
       href={href}
       className={cn(
-        // 與 Header 導覽連結（navClass text-sm）+ lg 階梯對齊；mark 用 em 跟字級縮放
-        "inline-flex min-w-0 max-w-full items-center gap-[0.45em] rounded-xl px-0.5 py-1 text-sm font-semibold tracking-[-0.01em] text-primary hover:opacity-90 focus-ring lg:text-[0.9375rem] sm:px-1",
+        "inline-flex min-w-0 max-w-full items-center gap-3 rounded-xl px-0.5 py-1 text-sm font-semibold tracking-[-0.01em] text-primary hover:opacity-90 focus-ring sm:gap-4 sm:px-1 md:gap-5 lg:text-[0.9375rem]",
         className
       )}
       aria-label="Habitooo"
     >
       {showMark ? (
-        <span className="relative inline-flex h-[2.35em] w-[2.35em] max-h-10 max-w-10 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-border-default bg-surface shadow-card">
-          {/* 路徑見 lib/image-assets.ts（BRAND_LOGO_SRC），預設為占位圖 */}
+        <span className="relative inline-flex h-24 w-24 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-border-default bg-surface shadow-card sm:h-28 sm:w-28 sm:rounded-3xl md:h-36 md:w-36 lg:h-[12.5rem] lg:w-[12.5rem] lg:rounded-[1.75rem]">
+          {/* 路徑見 lib/image-assets.ts（BRAND_LOGO_SRC） */}
           <img
             src={BRAND_LOGO_SRC}
             alt=""
-            width={40}
-            height={40}
-            className="size-full max-h-full object-contain p-[0.12em]"
+            width={200}
+            height={200}
+            className="size-full max-h-full object-contain p-1 sm:p-1.5 md:p-2 lg:p-3"
             decoding="async"
           />
         </span>
       ) : null}
-      <span className="truncate tracking-[-0.02em]">
+      <span className="truncate text-base tracking-[-0.02em] sm:text-lg md:text-xl lg:text-2xl">
         Habitooo
       </span>
     </Link>
