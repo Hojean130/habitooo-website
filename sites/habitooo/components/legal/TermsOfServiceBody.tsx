@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { LegalTableWrap } from "@/components/legal/LegalTableWrap";
+import { LEGAL_DOC_DATE, LEGAL_DOC_VERSION } from "@/lib/legal-doc-meta";
 import { getSupportEmail } from "@/lib/support-email";
 
 const mail = getSupportEmail();
@@ -550,11 +551,13 @@ export function TermsOfServiceBody() {
       <hr />
 
       <h2 id="version-history">版本紀錄</h2>
-      <ul>
-        <li>
-          v1.0（2026/05/12）：Apple ID 登入、Habitooo Pro（自動續訂 IAP）、Freeze／Retro／Late Rescue／Last Push 等功能與計費相關約定。
-        </li>
-      </ul>
+      <p>
+        <strong>{LEGAL_DOC_VERSION}</strong>
+        {" · "}
+        {LEGAL_DOC_DATE}
+        {" · "}
+        初版
+      </p>
     </>
   );
 }

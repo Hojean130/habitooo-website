@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { PrivacyPolicyBody } from "@/components/legal/PrivacyPolicyBody";
 import { LegalLayout, type LegalTocItem } from "@/components/legal/LegalLayout";
+import { LEGAL_DOC_DATE, LEGAL_DOC_VERSION } from "@/lib/legal-doc-meta";
 
 export const metadata: Metadata = {
   title: "隱私權政策"
@@ -33,9 +34,9 @@ export default function PrivacyPage() {
       badge="PRIVACY POLICY"
       title="Habitooo 隱私權政策"
       subtitle="我們重視你的資料透明度與控制權。"
-      version="v1.0"
-      effectiveAt="2026/05/12"
-      updatedAt="2026/05/12"
+      version={LEGAL_DOC_VERSION}
+      effectiveAt={LEGAL_DOC_DATE}
+      updatedAt={LEGAL_DOC_DATE}
       toc={toc}
     >
       <PrivacyPolicyBody />

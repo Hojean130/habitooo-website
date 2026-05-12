@@ -1,4 +1,5 @@
 import { LegalTableWrap } from "@/components/legal/LegalTableWrap";
+import { LEGAL_DOC_DATE, LEGAL_DOC_VERSION } from "@/lib/legal-doc-meta";
 import { getSupportEmail } from "@/lib/support-email";
 
 const mail = getSupportEmail();
@@ -873,12 +874,13 @@ export function PrivacyPolicyBody() {
       <hr />
 
       <h2 id="version-history">版本紀錄</h2>
-      <ul>
-        <li>
-          v1.0（2026/05/12）：Apple ID 登入；App 內購訂閱（Habitooo Pro）；連續凍結／補登／晚打卡救回／最後一推；iOS
-          主畫面小工具；推播通知。
-        </li>
-      </ul>
+      <p>
+        <strong>{LEGAL_DOC_VERSION}</strong>
+        {" · "}
+        {LEGAL_DOC_DATE}
+        {" · "}
+        初版
+      </p>
     </>
   );
 }
