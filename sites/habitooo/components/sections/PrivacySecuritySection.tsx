@@ -14,13 +14,13 @@ export function PrivacySecuritySection() {
     <Section id="privacy-security" tone="surface">
       <Container>
         <div className="mx-auto max-w-2xl">
-          <h2 className="text-balance text-center text-3xl font-semibold tracking-[-0.03em] text-primary md:text-4xl">
+          <h2 className="text-balance text-center text-2xl font-semibold tracking-[-0.03em] text-primary sm:text-3xl md:text-4xl">
             隱私與資料安全
           </h2>
 
-          <ul className="mt-10 space-y-3">
+          <ul className="mt-8 space-y-3 sm:mt-10">
             {points.map((t) => (
-              <li key={t} className="card bg-white px-4 py-3.5">
+              <li key={t} className="card bg-white px-3 py-3 sm:px-4 sm:py-3.5">
                 <span className="text-sm leading-relaxed text-secondary">{t}</span>
               </li>
             ))}

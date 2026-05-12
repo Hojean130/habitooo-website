@@ -41,8 +41,8 @@ export function LegalLayout({
   return (
     <main className="bg-background">
       <Container size="legal">
-        <div className="grid gap-10 py-12 md:grid-cols-[240px_1fr] md:py-16">
-          <aside className="md:sticky md:top-28 md:self-start">
+        <div className="grid gap-8 py-10 sm:gap-10 sm:py-12 md:grid-cols-[minmax(0,220px)_1fr] md:gap-12 md:py-16 lg:grid-cols-[240px_1fr]">
+          <aside className="min-w-0 md:sticky md:top-28 md:self-start">
             <div className="md:hidden">
               <details className="card-surface p-4">
                 <summary className="cursor-pointer select-none text-sm font-semibold text-primary">
@@ -58,7 +58,7 @@ export function LegalLayout({
 
           <article className="min-w-0">
             <div className="mb-10">
-              <h1 className="text-balance text-4xl font-semibold tracking-[-0.03em] text-primary">
+              <h1 className="text-balance text-3xl font-semibold tracking-[-0.03em] text-primary sm:text-4xl">
                 {title}
               </h1>
               <div className="mt-3 text-sm text-secondary">最後更新：{updatedAt}</div>

@@ -35,17 +35,17 @@ export function FeatureSection() {
     <Section id="features" tone="surface">
       <Container>
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-balance text-3xl font-semibold tracking-[-0.03em] text-primary md:text-4xl">
+          <h2 className="text-balance text-2xl font-semibold tracking-[-0.03em] text-primary sm:text-3xl md:text-4xl">
             核心功能
           </h2>
-          <p className="mt-4 text-pretty text-base leading-[1.65] text-secondary">
+          <p className="mt-3 text-pretty text-sm leading-[1.65] text-secondary sm:mt-4 sm:text-base">
             把習慣變成有人陪你一起完成的節奏。
           </p>
         </div>
 
-        <ul className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="mt-10 grid gap-3 sm:mt-12 sm:grid-cols-2 sm:gap-4 md:mt-14 lg:grid-cols-3">
           {items.map(({ title, body, Icon }) => (
-            <li key={title} className="card bg-white p-5">
+            <li key={title} className="card bg-white p-4 sm:p-5">
               <div className="flex items-start gap-3">
                 <span
                   className={cn(

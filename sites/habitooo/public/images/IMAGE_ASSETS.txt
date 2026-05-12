@@ -1,5 +1,8 @@
 Habitooo 官網靜態圖檔放這裡（Next.js：public/ 下的檔案網址從根路徑 / 開始）
 
+placeholders/
+  排版用占位 SVG（正式圖就緒後，改 lib/image-assets.ts 的 BRAND_LOGO_SRC 等常數）
+
 brand/
   logo.svg          ← Header / Footer 文字 logo 左側圖示（請換成正式 Habitooo logo）
   logo-wordmark.svg ← 可選：純圖片字標（若有的話）

@@ -9,7 +9,7 @@ import { DOWNLOAD_CTA_MODE } from "@/lib/download-cta";
 import { cn } from "@/lib/utils";
 
 const navClass =
-  "text-sm text-secondary hover:text-primary focus-ring rounded-lg px-1 py-1";
+  "text-sm font-medium text-secondary transition-colors hover:text-primary focus-ring rounded-md px-0.5 py-1";
 
 function HeaderPrimaryCta({ className }: { className?: string }) {
   if (DOWNLOAD_CTA_MODE === "store") {
@@ -37,30 +37,35 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border-default bg-white/70 backdrop-blur supports-[backdrop-filter]:bg-white/55">
+    <header className="sticky top-0 z-50 border-b border-border-default bg-white/90 backdrop-blur-md supports-[backdrop-filter]:bg-white/80">
       <Container>
-        <div className="flex items-center justify-between py-4">
-          <Brand showMark={false} />
+        <div className="flex min-w-0 items-center justify-between gap-3 py-3.5 sm:gap-6 md:py-4">
+          <div className="min-w-0 shrink">
+            <Brand showMark />
+          </div>
 
-          <nav className="hidden items-center gap-6 md:flex" aria-label="主要導覽">
+          <nav
+            className="hidden min-w-0 flex-1 items-center justify-end gap-3 text-xs font-medium md:flex md:gap-4 md:text-sm lg:gap-7 lg:text-[0.9375rem]"
+            aria-label="主要導覽"
+          >
             <Link className={navClass} href="#features">
               功能介紹
             </Link>
             <Link className={navClass} href="#audience">
               適合對象
             </Link>
+            <Link className={navClass} href="/support">
+              聯絡我們
+            </Link>
             <Link className={navClass} href="/privacy">
               隱私權政策
             </Link>
-            <Link className={navClass} href="/terms">
-              服務條款
-            </Link>
-            <HeaderPrimaryCta />
+            <HeaderPrimaryCta className="shrink-0" />
           </nav>
 
           <button
             type="button"
-            className="focus-ring inline-flex h-10 w-10 items-center justify-center rounded-xl border border-border-default bg-white text-primary md:hidden"
+            className="focus-ring inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-border-default bg-white text-primary md:hidden"
             aria-expanded={open}
             aria-controls="site-mobile-nav"
             onClick={() => setOpen((v) => !v)}
@@ -92,17 +97,17 @@ export function Header() {
               </Link>
               <Link
                 className="rounded-lg px-2 py-2.5 text-sm text-secondary hover:bg-surface hover:text-primary"
+                href="/support"
+                onClick={() => setOpen(false)}
+              >
+                聯絡我們
+              </Link>
+              <Link
+                className="rounded-lg px-2 py-2.5 text-sm text-secondary hover:bg-surface hover:text-primary"
                 href="/privacy"
                 onClick={() => setOpen(false)}
               >
                 隱私權政策
-              </Link>
-              <Link
-                className="rounded-lg px-2 py-2.5 text-sm text-secondary hover:bg-surface hover:text-primary"
-                href="/terms"
-                onClick={() => setOpen(false)}
-              >
-                服務條款
               </Link>
               <div className="px-2 pt-2" onClick={() => setOpen(false)}>
                 <HeaderPrimaryCta className="w-full justify-center" />

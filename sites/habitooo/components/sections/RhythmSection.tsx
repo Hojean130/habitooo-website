@@ -12,17 +12,17 @@ export function RhythmSection() {
   return (
     <Section tone="surface">
       <Container>
-        <div className="grid gap-10 md:grid-cols-2 md:items-start">
-          <div className="max-w-xl">
-            <h2 className="text-balance text-3xl font-semibold tracking-[-0.03em] text-primary md:text-4xl">
+        <div className="grid gap-8 md:grid-cols-2 md:items-start md:gap-10 lg:gap-12">
+          <div className="max-w-xl min-w-0">
+            <h2 className="text-balance text-2xl font-semibold tracking-[-0.03em] text-primary sm:text-3xl md:text-4xl">
               Habitooo 把習慣變成同步空間。
             </h2>
-            <p className="mt-5 text-pretty text-base leading-[1.65] text-secondary">
+            <p className="mt-4 text-pretty text-sm leading-[1.65] text-secondary sm:mt-5 sm:text-base">
               你加入一個習慣群組，看到誰正在進行、誰剛剛完成、今天還剩多少進度。當大家都在往前，你比較容易跟上，而不是一個人重新啟動。
             </p>
           </div>
 
-          <div className="grid gap-3">
+          <div className="grid min-w-0 gap-3 md:max-w-none">
             {items.map(([k, v]) => (
               <div key={k} className="card bg-white p-4">
                 <div className="text-sm font-semibold text-primary">{k}</div>

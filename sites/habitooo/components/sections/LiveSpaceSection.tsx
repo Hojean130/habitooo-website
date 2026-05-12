@@ -1,5 +1,5 @@
 import { LiveSpaceMock } from "@/components/sections/LiveSpaceMock";
-import { Container, Section } from "@/components/ui";
+import { Container, PlaceholderImage, Section } from "@/components/ui";
 
 const liveSignals: [string, string][] = [
   ["3 人正在進行", "你不是對著空白清單。你是在一個有人的房間。"],
@@ -12,14 +12,18 @@ export function LiveSpaceSection() {
   return (
     <Section id="live-space" tone="surface">
       <Container>
+        <div className="mb-8 sm:mb-10">
+          <p className="mb-2 text-xs text-secondary">行銷橫幅（占位）</p>
+          <PlaceholderImage variant="wide" className="overflow-hidden rounded-xl border border-border-default bg-surface shadow-card sm:rounded-2xl" />
+        </div>
         <p className="text-xs font-semibold tracking-wide text-secondary">Live Space</p>
-        <div className="mt-2 grid gap-10 md:grid-cols-2 md:items-center">
-          <div className="max-w-xl">
-            <h2 className="text-balance text-3xl font-semibold tracking-[-0.03em] text-primary md:text-4xl">
+        <div className="mt-2 grid gap-8 md:grid-cols-2 md:items-center md:gap-10 lg:gap-12">
+          <div className="max-w-xl min-w-0">
+            <h2 className="text-balance text-2xl font-semibold tracking-[-0.03em] text-primary sm:text-3xl md:text-4xl">
               Live Space，不是 checklist。
             </h2>
-            <p className="mt-3 text-lg font-semibold text-primary/90 md:text-xl">不是只有你一個人在撐。</p>
-            <p className="mt-5 text-pretty text-base leading-[1.65] text-secondary">
+            <p className="mt-3 text-base font-semibold text-primary/90 sm:text-lg md:text-xl">不是只有你一個人在撐。</p>
+            <p className="mt-4 text-pretty text-sm leading-[1.65] text-secondary sm:mt-5 sm:text-base">
               這是一個「大家正在一起推進」的空間。大部分人不是不知道該做什麼，而是一個人很難每天開始。Habitooo 讓你看見朋友的即時進度，透過同步感與陪伴感，把習慣變成一起前進的事情。
             </p>
             <p className="mt-4 text-xs text-secondary">
@@ -27,14 +31,14 @@ export function LiveSpaceSection() {
             </p>
           </div>
 
-          <div className="md:justify-self-end">
-            <LiveSpaceMock title="專注小群 Live" className="w-full max-w-[560px]" />
+          <div className="min-w-0 md:justify-self-end">
+            <LiveSpaceMock title="專注小群 Live" className="w-full max-w-[560px] md:ml-auto" />
           </div>
         </div>
 
-        <ul className="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        <ul className="mt-8 grid gap-3 sm:mt-10 sm:grid-cols-2 sm:gap-4 lg:mt-12 lg:grid-cols-4">
           {liveSignals.map(([k, v]) => (
-            <li key={k} className="card bg-white p-4">
+            <li key={k} className="card bg-white p-3 sm:p-4">
               <div className="text-sm font-semibold text-primary">{k}</div>
               <div className="mt-1 text-sm text-secondary">{v}</div>
             </li>

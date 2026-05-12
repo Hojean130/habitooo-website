@@ -38,21 +38,21 @@ export function LiveSpaceMock({
 }) {
   return (
     <div className={cn("card-surface overflow-hidden", className)}>
-      <div className="flex items-center justify-between px-5 py-4">
-        <div className="flex items-center gap-2">
-          <span className="inline-flex h-8 w-8 items-center justify-center rounded-xl border border-border-default bg-white shadow-card">
+      <div className="flex flex-col gap-3 px-4 py-3 sm:flex-row sm:items-center sm:justify-between sm:px-5 sm:py-4">
+        <div className="flex min-w-0 items-center gap-2">
+          <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-xl border border-border-default bg-white shadow-card">
             <span className="h-2 w-2 rounded-full bg-brand-green animate-live-pulse" />
           </span>
-          <div className="text-sm font-semibold tracking-[-0.01em] text-primary">{title}</div>
+          <div className="truncate text-sm font-semibold tracking-[-0.01em] text-primary">{title}</div>
         </div>
-        <div className="flex items-center gap-2 text-xs text-secondary">
-          <Users className="h-4 w-4" aria-hidden="true" />
+        <div className="flex shrink-0 items-center gap-2 text-xs text-secondary">
+          <Users className="h-4 w-4 shrink-0" aria-hidden="true" />
           <span>3 人正在進行</span>
         </div>
       </div>
 
-      <div className="border-t border-border-default px-5 py-4">
-        <div className="flex items-center justify-between gap-3">
+      <div className="border-t border-border-default px-4 py-3 sm:px-5 sm:py-4">
+        <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between sm:gap-3">
           <div className="flex items-center gap-2 text-sm font-semibold text-primary">
             <Clock className="h-4 w-4 text-secondary" aria-hidden="true" />
             <span>下一段 25:00</span>
@@ -75,7 +75,7 @@ export function LiveSpaceMock({
         </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-3 px-5 pb-5 md:grid-cols-4">
+      <div className="grid grid-cols-2 gap-2 px-4 pb-4 pt-0 sm:gap-3 sm:px-5 md:grid-cols-4">
         {members.map((m) => (
           <div key={m.name} className="card bg-white p-3">
             <div className="flex items-center justify-between">
@@ -97,8 +97,8 @@ export function LiveSpaceMock({
         ))}
       </div>
 
-      <div className="border-t border-border-default px-5 py-4">
-        <div className="text-xs text-secondary">
+      <div className="border-t border-border-default px-4 py-3 sm:px-5 sm:py-4">
+        <div className="text-xs leading-relaxed text-secondary">
           Kai 剛完成 · Ari 2 分鐘前加入 · 你要跟上嗎？
         </div>
       </div>

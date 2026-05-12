@@ -14,14 +14,14 @@ export function AudienceSection() {
     <Section id="audience">
       <Container>
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-balance text-3xl font-semibold tracking-[-0.03em] text-primary md:text-4xl">
+          <h2 className="text-balance text-2xl font-semibold tracking-[-0.03em] text-primary sm:text-3xl md:text-4xl">
             適合這樣的你
           </h2>
         </div>
 
-        <ul className="mx-auto mt-12 grid max-w-3xl gap-3">
+        <ul className="mx-auto mt-8 grid max-w-3xl gap-3 sm:mt-10 md:mt-12">
           {bullets.map((t) => (
-            <li key={t} className="card-surface px-4 py-3.5">
+            <li key={t} className="card-surface px-3 py-3 sm:px-4 sm:py-3.5">
               <span className="text-sm leading-relaxed text-secondary">{t}</span>
             </li>
           ))}
