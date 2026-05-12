@@ -72,9 +72,9 @@ export function LegalLayout({
                 </div>
 
                 {/* Tablet meta / actions (under title) */}
-                <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-secondary lg:hidden">
+                <div className="mt-5 flex min-w-0 flex-wrap items-center gap-x-4 gap-y-2 text-xs text-secondary lg:hidden">
                   <a
-                    className="text-brand-green underline decoration-brand-green/25 underline-offset-4 hover:decoration-brand-green/40 focus-ring"
+                    className="min-w-0 max-w-full break-all text-brand-green underline decoration-brand-green/25 underline-offset-4 hover:decoration-brand-green/40 focus-ring"
                     href={`mailto:${supportEmail}`}
                   >
                     {supportEmail}
@@ -117,22 +117,22 @@ export function LegalLayout({
 
           {/* Desktop right meta */}
           <aside className="hidden min-w-0 lg:block lg:sticky lg:top-24 lg:self-start">
-            <div className="rounded-2xl border border-border-default bg-white px-4 py-4">
+            <div className="min-w-0 max-w-full rounded-2xl border border-border-default bg-white px-4 py-4">
               <div className="text-[11px] font-semibold tracking-[0.14em] text-secondary">PAGE INFO</div>
               <dl className="mt-4 space-y-3 text-sm">
-                <div className="flex items-start justify-between gap-3">
-                  <dt className="text-secondary">Version</dt>
-                  <dd className="text-right font-medium text-primary">{version}</dd>
+                <div className="flex min-w-0 items-start justify-between gap-3">
+                  <dt className="shrink-0 text-secondary">Version</dt>
+                  <dd className="min-w-0 flex-1 text-right font-medium text-primary">{version}</dd>
                 </div>
-                <div className="flex items-start justify-between gap-3">
-                  <dt className="text-secondary">Last updated</dt>
-                  <dd className="text-right font-medium text-primary">{updatedAt}</dd>
+                <div className="flex min-w-0 items-start justify-between gap-3">
+                  <dt className="shrink-0 text-secondary">Last updated</dt>
+                  <dd className="min-w-0 flex-1 text-right font-medium text-primary">{updatedAt}</dd>
                 </div>
-                <div className="flex items-start justify-between gap-3">
-                  <dt className="text-secondary">Contact</dt>
-                  <dd className="text-right">
+                <div className="flex min-w-0 items-start justify-between gap-3">
+                  <dt className="shrink-0 text-secondary">Contact</dt>
+                  <dd className="min-w-0 flex-1 text-right">
                     <a
-                      className="text-brand-green underline decoration-brand-green/25 underline-offset-4 hover:decoration-brand-green/40 focus-ring"
+                      className="block w-full max-w-full break-all text-brand-green underline decoration-brand-green/25 underline-offset-4 hover:decoration-brand-green/40 focus-ring"
                       href={`mailto:${supportEmail}`}
                     >
                       {supportEmail}
