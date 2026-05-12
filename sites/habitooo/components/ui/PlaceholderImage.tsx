@@ -25,6 +25,15 @@ const altText: Record<PlaceholderVariant, string> = {
   "badge-google": "Google Play 圖示占位"
 };
 
+/** 對應實際資產比例，供瀏覽器預留版面 */
+const intrinsic: Record<PlaceholderVariant, { width: number; height: number }> = {
+  logo: { width: 200, height: 120 },
+  phone: { width: 220, height: 440 },
+  wide: { width: 960, height: 320 },
+  "badge-app": { width: 160, height: 48 },
+  "badge-google": { width: 180, height: 48 }
+};
+
 export function PlaceholderImage({
   variant,
   className,
@@ -41,8 +50,8 @@ export function PlaceholderImage({
         src={src[variant]}
         alt={altText[variant]}
         className={cn("block h-auto w-full select-none", imgClassName)}
-        width={variant === "phone" ? 220 : variant === "wide" ? 960 : variant === "badge-google" ? 180 : variant === "badge-app" ? 160 : 64}
-        height={variant === "phone" ? 440 : variant === "wide" ? 320 : variant === "badge-app" || variant === "badge-google" ? 48 : 64}
+        width={intrinsic[variant].width}
+        height={intrinsic[variant].height}
         decoding="async"
       />
     </figure>
