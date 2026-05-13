@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { TermsOfServiceBody } from "@/components/legal/TermsOfServiceBody";
 import { LegalLayout, type LegalTocItem } from "@/components/legal/LegalLayout";
-import { LEGAL_DOC_DATE, LEGAL_DOC_VERSION } from "@/lib/legal-doc-meta";
+import { TERMS_EFFECTIVE_AT, TERMS_UPDATED_AT, TERMS_VERSION } from "@/lib/legal-doc-meta";
 
 export const metadata: Metadata = {
   title: "服務條款"
@@ -32,9 +32,9 @@ export default function TermsPage() {
       badge="TERMS OF SERVICE"
       title="Habitooo 服務條款"
       subtitle="使用 Habitooo 前，請先詳閱本條款內容。"
-      version={LEGAL_DOC_VERSION}
-      effectiveAt={LEGAL_DOC_DATE}
-      updatedAt={LEGAL_DOC_DATE}
+      version={TERMS_VERSION}
+      effectiveAt={TERMS_EFFECTIVE_AT}
+      updatedAt={TERMS_UPDATED_AT}
       toc={toc}
     >
       <TermsOfServiceBody />

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { LegalTableWrap } from "@/components/legal/LegalTableWrap";
-import { LEGAL_DOC_DATE, LEGAL_DOC_VERSION } from "@/lib/legal-doc-meta";
+import { TERMS_EFFECTIVE_AT, TERMS_VERSION } from "@/lib/legal-doc-meta";
 import { getSupportEmail } from "@/lib/support-email";
 
 const mail = getSupportEmail();
@@ -552,9 +552,9 @@ export function TermsOfServiceBody() {
 
       <h2 id="version-history">版本紀錄</h2>
       <p>
-        <strong>{LEGAL_DOC_VERSION}</strong>
+        <strong>{TERMS_VERSION}</strong>
         {" · "}
-        {LEGAL_DOC_DATE}
+        {TERMS_EFFECTIVE_AT}
         {" · "}
         初版
       </p>
