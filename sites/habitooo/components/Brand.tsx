@@ -27,7 +27,7 @@ export function Brand({
           alt=""
           width={3400}
           height={948}
-          className="block h-14 w-auto max-w-full shrink-0 transform-gpu object-contain object-left sm:h-16 md:h-[5.5rem] lg:h-[7.5rem]"
+          className="block h-12 w-auto max-w-full shrink-0 transform-gpu object-contain object-left sm:h-14 md:h-[4.5rem] lg:h-24"
           decoding="sync"
           fetchPriority="high"
         />

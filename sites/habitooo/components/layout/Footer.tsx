@@ -20,7 +20,7 @@ export function Footer() {
               <PlaceholderImage
                 variant="logo"
                 className="w-fit shrink-0"
-                imgClassName="h-14 w-auto max-w-full object-contain object-left sm:h-16"
+                imgClassName="h-12 w-auto max-w-full object-contain object-left sm:h-14"
               />
               <p className="max-w-sm text-sm leading-relaxed text-secondary sm:text-[0.9375rem]">
                 有人陪你一起撐的社交習慣空間。
