@@ -16,7 +16,7 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-x-6 gap-y-10 py-12 sm:grid-cols-2 sm:gap-x-8 sm:py-14 md:py-16 lg:grid-cols-6 lg:gap-x-10 lg:gap-y-12 lg:py-16">
           {/* 品牌區（對應 Foodooo 首欄 Logo + 標語） */}
           <div className="min-w-0 sm:col-span-2 lg:col-span-2">
-            <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
+            <div className="flex flex-col items-start gap-3">
               <PlaceholderImage
                 variant="logo"
                 className="w-fit shrink-0"
