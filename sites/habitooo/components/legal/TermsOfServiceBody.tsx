@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { LegalTableWrap } from "@/components/legal/LegalTableWrap";
-import { TERMS_INITIAL_RELEASE_AT } from "@/lib/legal-doc-meta";
+import { TERMS_EFFECTIVE_AT } from "@/lib/legal-doc-meta";
 import { getSupportEmail } from "@/lib/support-email";
 
 const mail = getSupportEmail();
@@ -551,18 +551,12 @@ export function TermsOfServiceBody() {
       <hr />
 
       <h2 id="version-history">版本紀錄</h2>
-      <ul>
-        <li>
-          <strong>v1.0</strong>
-          {"（"}
-          {TERMS_INITIAL_RELEASE_AT}
-          {"）：初版"}
-        </li>
-        <li>
-          <strong>v1.1</strong>
-          {"（2026/05/12）：Apple ID、IAP Pro、Freeze/Retro/Late Rescue/Last Push、Apple EULA 必載、健康警語、責任限制金額、EU ODR、版本通知機制（摘要）"}
-        </li>
-      </ul>
+      <p>
+        <strong>v1.0</strong>
+        {"（"}
+        {TERMS_EFFECTIVE_AT}
+        {"）：初版"}
+      </p>
     </>
   );
 }

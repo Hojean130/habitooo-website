@@ -1,5 +1,5 @@
 import { LegalTableWrap } from "@/components/legal/LegalTableWrap";
-import { PRIVACY_INITIAL_RELEASE_AT, PRIVACY_UPDATED_AT, PRIVACY_VERSION } from "@/lib/legal-doc-meta";
+import { PRIVACY_UPDATED_AT } from "@/lib/legal-doc-meta";
 import { getSupportEmail } from "@/lib/support-email";
 
 const mail = getSupportEmail();
@@ -874,20 +874,12 @@ export function PrivacyPolicyBody() {
       <hr />
 
       <h2 id="version-history">版本紀錄</h2>
-      <ul>
-        <li>
-          <strong>v1.0</strong>
-          {"（"}
-          {PRIVACY_INITIAL_RELEASE_AT}
-          {"）：初版"}
-        </li>
-        <li>
-          <strong>{PRIVACY_VERSION}</strong>
-          {"（"}
-          {PRIVACY_UPDATED_AT}
-          {"）：補強 Apple ID 登入、IAP 訂閱（Habitooo Pro）、Freeze／Retro／Late Rescue／Last Push、iOS Widget、推播 token、第三方處理者揭露、GDPR/CCPA/台灣個資告知與 App Store/Google Play 對照附錄。"}
-        </li>
-      </ul>
+      <p>
+        <strong>v1.0</strong>
+        {"（"}
+        {PRIVACY_UPDATED_AT}
+        {"）：初版"}
+      </p>
     </>
   );
 }
