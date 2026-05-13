@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { LegalTableWrap } from "@/components/legal/LegalTableWrap";
-import { TERMS_EFFECTIVE_AT, TERMS_VERSION } from "@/lib/legal-doc-meta";
+import { TERMS_INITIAL_RELEASE_AT, TERMS_UPDATED_AT, TERMS_VERSION } from "@/lib/legal-doc-meta";
 import { getSupportEmail } from "@/lib/support-email";
 
 const mail = getSupportEmail();
@@ -551,13 +551,20 @@ export function TermsOfServiceBody() {
       <hr />
 
       <h2 id="version-history">版本紀錄</h2>
-      <p>
-        <strong>{TERMS_VERSION}</strong>
-        {" · "}
-        {TERMS_EFFECTIVE_AT}
-        {" · "}
-        初版
-      </p>
+      <ul>
+        <li>
+          <strong>v1.0</strong>
+          {"（"}
+          {TERMS_INITIAL_RELEASE_AT}
+          {"）：初版"}
+        </li>
+        <li>
+          <strong>{TERMS_VERSION}</strong>
+          {"（"}
+          {TERMS_UPDATED_AT}
+          {"）：加入 Apple ID 登入、Habitooo Pro（自動續訂 IAP）、Freeze／Retro／Late Rescue／Last Push、Apple Licensed Application EULA 必載事項、健康警語、責任限制金額具體化、EU ODR 與文件版本通知機制。"}
+        </li>
+      </ul>
     </>
   );
 }
