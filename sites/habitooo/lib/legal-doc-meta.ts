@@ -1,6 +1,6 @@
 /** 條款／隱私頁頁首與正文共用；更新文件時一併改此檔 */
 
-export const TERMS_VERSION = "v1.1";
+export const TERMS_VERSION = "v1.0";
 export const TERMS_EFFECTIVE_AT = "2026/05/12";
 export const TERMS_UPDATED_AT = "2026/05/12";
 
