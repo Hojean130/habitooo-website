@@ -14,7 +14,8 @@ const nextConfig = {
       { source: "/habitooo", destination: "/", permanent: true },
       { source: "/habitooo/privacy", destination: "/privacy", permanent: true },
       { source: "/habitooo/terms", destination: "/terms", permanent: true },
-      { source: "/habitooo/support", destination: "/support", permanent: true }
+      { source: "/habitooo/support", destination: "/support", permanent: true },
+      { source: "/habitooo/delete-account", destination: "/delete-account", permanent: true }
     ];
   }
 };

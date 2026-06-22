@@ -71,6 +71,11 @@ export function Footer() {
                   服務條款
                 </Link>
               </li>
+              <li>
+                <Link className={link} href="/delete-account">
+                  刪除帳號
+                </Link>
+              </li>
             </ul>
           </div>
 

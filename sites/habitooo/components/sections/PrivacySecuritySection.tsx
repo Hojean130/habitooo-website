@@ -33,6 +33,13 @@ export function PrivacySecuritySection() {
             >
               閱讀完整隱私權政策
             </Link>
+            <span className="mx-2 text-secondary/40">·</span>
+            <Link
+              href="/delete-account"
+              className="font-semibold text-primary underline decoration-primary/20 underline-offset-4 hover:decoration-primary/35"
+            >
+              刪除帳號
+            </Link>
           </p>
         </div>
       </Container>

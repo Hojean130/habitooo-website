@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { LegalLayout, type LegalTocItem } from "@/components/legal/LegalLayout";
 import { getSupportEmail } from "@/lib/support-email";
 
@@ -64,17 +65,14 @@ export default function SupportPage() {
 
       <h2 id="delete">刪除帳號 / 資料請求</h2>
       <p>
-        你可以寄信到{" "}
+        請於 App 內「個人資料」→「帳號安全」→「刪除帳號」完成刪除。步驟與資料範圍請見{" "}
+        <Link href="/delete-account">刪除帳號說明頁</Link>。若無法於 App 內操作，請來信{" "}
         {mailto ? (
           <a href={mailto}>{supportEmail}</a>
         ) : (
           <span>{supportEmail}</span>
         )}
-        ，主旨請寫「Habitooo - 刪除帳號/資料請求」，
-        並在內容提供你的登入方式（Apple/Google）與顯示名稱（如有）。
-      </p>
-      <p>
-        我們會在確認身分後處理你的刪除/匯出請求，並在合理期間內完成。若你需要資料副本（data export），請在信中註明。
+        （主旨請註明「Habitooo 隱私請求」）。
       </p>
     </LegalLayout>
   );
